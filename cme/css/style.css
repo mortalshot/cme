@@ -387,12 +387,12 @@ img {
   margin-left: 7px;
 }
 
-.header__btn {
+.header__btn.btn {
   font-size: 12px;
   line-height: 16px;
 }
 
-.header__btn::before {
+.header__btn.btn::before {
   width: 15px;
   height: 15px;
   background: url(../img/icons/setting-wh.svg) no-repeat center/cover;
