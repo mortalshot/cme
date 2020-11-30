@@ -1,0 +1,176 @@
+.service {
+	padding: 45px 0;
+	overflow: hidden;
+
+	@media screen and (max-width: 575px) {
+		position: relative;
+	}
+
+	&--bg {
+		background-color: $Black;
+		color: $White;
+	}
+
+	&--reverse {
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			display: block;
+			width: 648px;
+			height: 382px;
+			background: url(../img/schedule/bg-2.svg) no-repeat center/cover;
+
+			@media screen and (max-width: 1200px) {
+				width: 392px;
+				height: 231px;
+			}
+			@media screen and (max-width: 991px) {
+				width: 214px;
+				height: 115px;
+			}
+		}
+		.service {
+			&__container {
+				max-width: 1680px;
+			}
+
+			&__row {
+				flex-direction: row-reverse;
+			}
+
+			&__content {
+				padding: 0px 0px 0px 15px;
+				flex: 1 1 auto;
+				z-index: 1;
+
+				@media screen and (max-width: 575px) {
+					padding-left: 0;
+				}
+			}
+
+			&__image {
+				flex: 0 0 42%;
+			}
+		}
+	}
+
+	&__container {
+	}
+
+	&__row {
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__content {
+		flex: 0 0 52%;
+		padding-right: 15px;
+
+		@media screen and (max-width: 1200px) {
+			flex: 0 0 60%;
+		}
+		@media screen and (max-width: 575px) {
+			flex: 0 0 100%;
+			z-index: 1;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 52px;
+		line-height: 56px;
+		margin-bottom: 8px;
+		text-transform: uppercase;
+		max-width: 600px;
+
+		@media screen and (max-width: $layoutDesktop + "px") {
+			font-size: calc(24px + 28 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+			line-height: calc(56 / 52);
+		}
+	}
+
+	&__subtitle {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 33px;
+		margin-bottom: 16px;
+
+		@media screen and (max-width: $layoutDesktop + "px") {
+			font-size: calc(12px + 12 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+			line-height: calc(33 / 24);
+		}
+	}
+
+	&__options {
+		padding-left: 44px;
+		position: relative;
+		margin-bottom: 30px;
+
+		&::before {
+			content: "";
+			display: block;
+			width: 6px;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			background-color: $Red;
+			transform: translate(0, -50%);
+
+			@media screen and (max-width: 991px) {
+				width: 4px;
+			}
+		}
+
+		@media screen and (max-width: 1200px) {
+			padding-left: 36px;
+		}
+		@media screen and (max-width: 991px) {
+			padding-left: 24px;
+		}
+		@media screen and (max-width: 575px) {
+			margin-bottom: 70px;
+		}
+	}
+
+	&__item {
+		margin-bottom: 11px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@media screen and (max-width: 767px) {
+			margin-bottom: 7px;
+		}
+		@media screen and (max-width: 575px) {
+			margin-bottom: 5px;
+		}
+	}
+
+	&__btn {
+		margin-left: 44px;
+
+		@media screen and (max-width: 575px) {
+			margin: 0 auto;
+		}
+	}
+
+	&__image {
+		flex: 1 1 auto;
+
+		@media screen and (max-width: 575px) {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			opacity: 0.5;
+			max-width: 380px;
+			transform: translate(80px, 60px);
+		}
+	}
+}

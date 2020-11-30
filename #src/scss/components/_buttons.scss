@@ -1,3 +1,21 @@
 .btn {
-    
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    border-radius: 3px;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 19px;
+    min-height: 36px;
+    background-color: $Red;
+    color: $White;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 13px;
+        height: 11px;
+        background: url(../img/icons/btn-more.svg) no-repeat center/cover;
+        margin-right: 6px;
+    }
 }

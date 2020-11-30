@@ -1,0 +1,101 @@
+.map {
+	position: relative;
+	margin-bottom: -6px;
+
+	&__wrapper {
+		iframe {
+			@media screen and (max-width: 1200px) {
+				height: 440px;
+			}
+		}
+	}
+
+	&__description {
+		position: absolute;
+		top: 48.6%;
+		left: 31.7%;
+		transform: translate(-50%, -50%);
+		background-color: rgba($color: $White, $alpha: 0.9);
+		padding: 25px 50px 50px;
+		max-width: 442px;
+
+		@media screen and (max-width: 1200px) {
+			left: 50px;
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+		@media screen and (max-width: 991px) {
+			padding: 15px 20px 30px;
+			max-width: 313px;
+		}
+		@media screen and (max-width: 575px) {
+			position: inherit;
+			transform: translate(0);
+			left: auto;
+			top: auto;
+			padding-top: 40px;
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 49px;
+		text-transform: uppercase;
+		margin-bottom: 35px;
+
+		@media screen and (max-width: $layoutDesktop + "px") {
+			font-size: calc(24px + 12 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+			line-height: calc(49 / 36);
+		}
+		@media screen and (max-width: 1200px) {
+			margin-bottom: 13px;
+		}
+	}
+
+	&__details {
+		padding-left: 33px;
+		position: relative;
+
+		@media screen and (max-width: 991px) {
+			padding-left: 22px;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			width: 6px;
+			height: 100%;
+			background-color: $Red;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translate(0, -50%);
+
+			@media screen and (max-width: 991px) {
+				width: 4px;
+			}
+		}
+	}
+
+	&__contact {
+		display: flex;
+		align-items: center;
+	}
+
+	&__contact--address {
+		margin-bottom: 31px;
+
+		@media screen and (max-width: 1200px) {
+			margin-bottom: 11px;
+		}
+	}
+
+	&__label {
+		margin-right: 3px;
+	}
+
+	&__link {
+		color: $Black;
+	}
+}

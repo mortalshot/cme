@@ -1,0 +1,45 @@
+.social {
+	display: flex;
+
+	@media screen and (max-width: 575px) {
+		justify-content: center;
+	}
+
+	&__item {
+		margin-right: 25px;
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@media screen and (max-width: 991px) {
+			margin-right: 3px;
+		}
+		@media screen and (max-width: 575px) {
+			i {
+				color: $Black;
+			}
+		}
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 4px;
+		border: 1px solid $LGray;
+		width: 42px;
+		height: 42px;
+
+		@media screen and (max-width: 991px) {
+			transform: scale(0.66);
+			transform-origin: 100%;
+		}
+		@media screen and (max-width: 575px) {
+			border-color: $Black;
+
+			svg path {
+				fill: $Black;
+			}
+		}
+	}
+}

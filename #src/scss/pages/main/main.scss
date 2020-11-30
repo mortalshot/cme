@@ -1,0 +1,197 @@
+.main {
+	transform: translate(0, -#{$size-header-height});
+	margin-bottom: -#{$size-header-height};
+
+	@media screen and (max-width: 1200px) {
+		transform: translate(0, -#{$size-header-height-md});
+		margin-bottom: -#{$size-header-height-md};
+	}
+
+	&__slider {
+		&::before {
+			content: "";
+			display: block;
+			height: 100%;
+			width: 796px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1;
+			background: url(../img/slider/main-bg.svg) no-repeat center/cover;
+			pointer-events: none;
+
+			@media screen and (max-width: $layoutDesktop + "px") {
+				left: calc((100vw - #{$layoutDesktop}px) / 2.5);
+			}
+			@media screen and (max-width: 1500px) {
+				left: -170px;
+			}
+			@media screen and (max-width: 1200px) {
+				background: url(../img/slider/main-bg-lg.svg) no-repeat center/cover;
+				width: 484px;
+				left: 0;
+			}
+			@media screen and (max-width: 991px) {
+				background: url(../img/slider/main-bg-md.svg) no-repeat center/cover;
+				width: 380px;
+			}
+			@media screen and (max-width: 575px) {
+				background: url(../img/slider/main-bg-xs.svg) no-repeat center/cover;
+				width: 259px;
+			}
+		}
+
+		.slick-dots {
+			display: flex;
+			justify-content: center;
+			position: absolute;
+			bottom: 55px;
+			left: 50%;
+			transform: translate(-50%, 0);
+
+			@media screen and (max-width: 1200px) {
+				bottom: 29px;
+			}
+			@media screen and (max-width: 880px) {
+				bottom: 20px;
+			}
+
+			li {
+				margin-right: 7px;
+				&:last-child {
+					margin-right: 0;
+				}
+
+				button {
+					font-size: 0;
+					width: 54px;
+					height: 10px;
+					background-color: $White;
+
+					@media screen and (max-width: 880px) {
+						width: 43px;
+						height: 8px;
+					}
+				}
+
+				&.slick-active {
+					button {
+						background-color: $Red;
+					}
+				}
+			}
+		}
+	}
+
+	&__item {
+		min-height: 600px;
+		padding-top: $size-header-height;
+		position: relative;
+		overflow: hidden;
+
+		@media screen and (max-width: 1200px) {
+			min-height: 400px;
+			padding-top: $size-header-height-md;
+		}
+		@media screen and (max-width: 880px) {
+			min-height: 330px;
+		}
+	}
+
+	&__container {
+		@media screen and (min-width: 992px) {
+			padding-left: 215px;
+		}
+		@media screen and (max-width: 1500px) {
+			padding-left: 250px;
+		}
+		@media screen and (max-width: 1400px) {
+			padding-left: 300px;
+		}
+		@media screen and (max-width: 1300px) {
+			padding-left: 360px;
+		}
+		@media screen and (max-width: 1200px) {
+			padding-left: 300px;
+		}
+		@media screen and (max-width: 991px) {
+			padding-left: 230px;
+		}
+		@media screen and (max-width: 575px) {
+			padding-left: 100px;
+		}
+	}
+
+	&__body {
+		color: $White;
+		position: relative;
+		z-index: 2;
+		padding: 32px 0 139px;
+
+		@media screen and (max-width: 1600px) {
+			padding-bottom: 86px;
+		}
+		@media screen and (max-width: 1200px) {
+			padding: 10px 0 30px;
+		}
+		@media screen and (max-width: 880px) {
+			padding: 0 0 40px;
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 72px;
+		line-height: 65px;
+		text-transform: uppercase;
+		margin-bottom: 13px;
+
+		@media screen and (max-width: $layoutDesktop + "px") {
+			font-size: calc(24px + 48 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+			line-height: calc(65 / 72);
+		}
+
+		span {
+			display: block;
+			font-weight: 600;
+			font-size: 52px;
+			line-height: 71px;
+
+			@media screen and (max-width: $layoutDesktop + "px") {
+				font-size: calc(18px + 34 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+				line-height: calc(71 / 52);
+			}
+		}
+	}
+
+	&__option {
+		display: flex;
+		line-height: 30px;
+
+		@media screen and (max-width: $layoutDesktop + "px") {
+			line-height: calc(30 / 18);
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			width: 12px;
+			height: 12px;
+			flex: 0 0 12px;
+			background: url(../img/icons/setting.svg) no-repeat center/cover;
+			margin: 8px 13px 0px 0px;
+
+			@media screen and (max-width: 575px) {
+				margin-right: 5px;
+			}
+		}
+
+		strong {
+			white-space: nowrap;
+		}
+	}
+
+	&__btn {
+		margin: 23px 0px 0px 30px;
+	}
+}
