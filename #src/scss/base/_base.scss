@@ -6,6 +6,10 @@ body {
     color: $fontColor;
     overflow-x: hidden;
 
+    @media screen and (min-width: 2200px) {
+        font-size: 24px;
+        line-height: 40px;
+    }
     @media screen and (max-width: $layoutDesktop + 'px') {
         font-size: calc(12px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
         line-height: calc(25 / 18);
@@ -35,6 +39,10 @@ body {
     max-width: $size-container;
     margin: 0 auto;
     padding: 0 15px;
+
+    @media screen and (min-width: 2200px) {
+        max-width: 1620px;
+    }
 }
 
 .row {

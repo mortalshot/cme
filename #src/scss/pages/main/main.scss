@@ -1,10 +1,58 @@
 .main {
 	transform: translate(0, -#{$size-header-height});
 	margin-bottom: -#{$size-header-height};
+	position: relative;
 
 	@media screen and (max-width: 1200px) {
 		transform: translate(0, -#{$size-header-height-md});
 		margin-bottom: -#{$size-header-height-md};
+	}
+
+	&__logo {
+		position: absolute;
+		top: 45px;
+		z-index: 3;
+
+
+		@media screen and (min-width: 2300px) {
+			left: 216px;
+			top: 70px;
+			svg {
+				width: 424px;
+				height: 231px;
+			}
+		}
+		@media screen and (min-width: 1921px) {
+		    left: 177px;
+		}
+		@media screen and (max-width: $layoutDesktop + "px") {
+			left: calc((100vw - #{$layoutDesktop}px) / 2.5 + 178px);
+		}
+		@media screen and (max-width: 1500px) {
+			left: 14px;
+		}
+		@media screen and (max-width: 1200px) {
+			svg {
+				width: 195px;
+				height: 111px;
+			}
+		}
+		@media screen and (max-width: 991px) {
+			left: 50px;
+
+			svg {
+				width: 126px;
+				height: 72px;
+			}
+		}
+		@media screen and (max-width: 575px) {
+			left: 14px;
+
+			svg {
+				width: 66px;
+				height: 38px;
+			}
+		}
 	}
 
 	&__slider {
@@ -20,6 +68,11 @@
 			background: url(../img/slider/main-bg.svg) no-repeat center/cover;
 			pointer-events: none;
 
+			@media screen and (min-width: 2300px) {
+				background: url(../img/slider/main-bg-xl.svg) no-repeat center/cover;
+				width: 1072px;
+				height: 800px;
+			}
 			@media screen and (max-width: $layoutDesktop + "px") {
 				left: calc((100vw - #{$layoutDesktop}px) / 2.5);
 			}
@@ -48,7 +101,11 @@
 			bottom: 55px;
 			left: 50%;
 			transform: translate(-50%, 0);
+			z-index: 1;
 
+			@media screen and (min-width: 2200px) {
+				bottom: 83px;
+			}
 			@media screen and (max-width: 1200px) {
 				bottom: 29px;
 			}
@@ -62,12 +119,20 @@
 					margin-right: 0;
 				}
 
+				@media screen and (min-width: 2200px) {
+					margin-right: 10px;
+				}
+
 				button {
 					font-size: 0;
 					width: 54px;
 					height: 10px;
 					background-color: $White;
 
+					@media screen and (min-width: 2200px) {
+						width: 76px;
+						height: 14px;
+					}
 					@media screen and (max-width: 880px) {
 						width: 43px;
 						height: 8px;
@@ -89,6 +154,9 @@
 		position: relative;
 		overflow: hidden;
 
+		@media screen and (min-width: 2200px) {
+			min-height: 800px;
+		}
 		@media screen and (max-width: 1200px) {
 			min-height: 400px;
 			padding-top: $size-header-height-md;
@@ -99,6 +167,9 @@
 	}
 
 	&__container {
+		@media screen and (min-width: 2200px) {
+			padding-left: 384px;
+		}
 		@media screen and (min-width: 992px) {
 			padding-left: 215px;
 		}
@@ -128,6 +199,9 @@
 		z-index: 2;
 		padding: 32px 0 139px;
 
+		@media screen and (min-width: 2200px) {
+			padding: 68px 0 139px;
+		}
 		@media screen and (max-width: 1600px) {
 			padding-bottom: 86px;
 		}
@@ -146,6 +220,11 @@
 		text-transform: uppercase;
 		margin-bottom: 13px;
 
+		@media screen and (min-width: 2200px) {
+			font-size: 96px;
+			line-height: 88px;
+			margin-bottom: 20px;
+		}
 		@media screen and (max-width: $layoutDesktop + "px") {
 			font-size: calc(24px + 48 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 			line-height: calc(65 / 72);
@@ -157,6 +236,10 @@
 			font-size: 52px;
 			line-height: 71px;
 
+			@media screen and (min-width: 2200px) {
+				font-size: 72px;
+				line-height: 98px;
+			}
 			@media screen and (max-width: $layoutDesktop + "px") {
 				font-size: calc(18px + 34 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 				line-height: calc(71 / 52);
@@ -168,6 +251,10 @@
 		display: flex;
 		line-height: 30px;
 
+		@media screen and (min-width: 2200px) {
+			font-size: 24px;
+			line-height: 40px;
+		}
 		@media screen and (max-width: $layoutDesktop + "px") {
 			line-height: calc(30 / 18);
 		}
@@ -181,6 +268,12 @@
 			background: url(../img/icons/setting.svg) no-repeat center/cover;
 			margin: 8px 13px 0px 0px;
 
+			@media screen and (min-width: 2200px) {
+				width: 15px;
+				height: 15px;
+				flex: 0 0 15px;
+				margin-top: 15px;
+			}
 			@media screen and (max-width: 575px) {
 				margin-right: 5px;
 			}
@@ -193,5 +286,9 @@
 
 	&__btn {
 		margin: 23px 0px 0px 30px;
+
+		@media screen and (min-width: 2200px) {
+			margin: 47px 0px 0px 0px;
+		}
 	}
 }

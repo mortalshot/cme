@@ -23,6 +23,18 @@
 		height: 465px;
 		background: url(../img/schedule/bg-1.png) no-repeat center/cover;
 
+		@media screen and (min-width: 2400px) {
+			max-width: 778px;
+			height: 629px;
+		}
+		@media screen and (min-width: 2300px) {
+			max-width: 708px;
+			height: 579px;
+		}
+		@media screen and (min-width: 2200px) {
+			max-width: 628px;
+			height: 509px;
+		}
 		@media screen and (max-width: 1200px) {
 			max-width: 367px;
 			height: 308px;
@@ -38,12 +50,18 @@
 		height: 100%;
 		background: url(../img/schedule/bg-2.svg) no-repeat center/cover;
 
+		@media screen and (min-width: 2200px) {
+			width: 838px;
+		}
 		@media screen and (max-width: 1200px) {
 			width: 392px;
 		}
 	}
 
 	&__container {
+		@media screen and (min-width: 2200px) {
+			padding-left: 384px;
+		}
 		@media screen and (min-width: 992px) {
 			padding-left: 215px;
 		}
@@ -73,6 +91,9 @@
 		position: relative;
 		z-index: 1;
 
+		@media screen and (min-width: 2200px) {
+			padding: 46px 0 52px 8px;
+		}
 		@media screen and (max-width: 1200px) {
 			padding: 22px 0px 45px 15px;
 		}
@@ -92,6 +113,9 @@
 		flex: 0 0 64%;
 		padding-right: 15px;
 
+		@media screen and (min-width: 2200px) {
+			flex: 0 0 82%;
+		}
 		@media screen and (max-width: 991px) {
 			flex: 0 0 62%;
 		}
@@ -109,6 +133,20 @@
 			margin-bottom: 0;
 		}
 
+		&::before {
+			@media screen and (min-width: 2200px) {
+				width: 18px;
+				height: 18px;
+				flex: 0 0 18px;
+				margin: 13px 18px 0 0;
+			}
+		}
+
+		@media screen and (min-width: 2200px) {
+			line-height: 33px;
+			max-width: 810px;
+			margin-bottom: 38px;
+		}
 		@media screen and (max-width: $layoutDesktop + "px") {
 			line-height: calc(25 / 18);
 		}
@@ -151,6 +189,11 @@
 		text-transform: uppercase;
 		margin-bottom: 14px;
 
+		@media screen and (min-width: 2200px) {
+			font-size: 36px;
+			line-height: 49px;
+			margin-bottom: 8px;
+		}
 		@media screen and (max-width: $layoutDesktop + "px") {
 			font-size: calc(18px + 8 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 			line-height: calc(35 / 26);
@@ -175,6 +218,9 @@
 		margin-bottom: 15px;
 		display: flex;
 
+		@media screen and (min-width: 2200px) {
+			margin-bottom: 10px;
+		}
 		@media screen and (max-width: 1200px) {
 			margin-bottom: 11px;
 		}
@@ -213,7 +259,12 @@
 		margin-bottom: 6px;
 		max-width: 203px;
 		
-
+		@media screen and (min-width: 2200px) {
+			font-size: 20px;
+			line-height: 27px;
+			margin: 25px 0 7px 0;
+			max-width: 303px;
+		}
 		@media screen and (max-width: $layoutDesktop + "px") {
 			font-size: calc(12px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 			line-height: calc(22 / 16);
@@ -240,6 +291,11 @@
 			font-weight: 400;
 		}
 
+		@media screen and (min-width: 2200px) {
+			font-size: 36px;
+			line-height: 49px;
+			margin-bottom: 21px;
+		}
 		@media screen and (max-width: $layoutDesktop + "px") {
 			font-size: calc(18px + 8 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 			line-height: calc(35 / 26);
@@ -256,10 +312,17 @@
 	}
 
 	&__btn {
+		@media screen and (min-width: 2200px) {
+			padding: 12px 41px;
+		}
 		&::before {
 			width: 15px;
 			height: 15px;
 			background: url(../img/icons/setting-wh.svg) no-repeat center/cover;
+
+			@media screen and (min-width: 2200px) {
+				margin-right: 9px;
+			}
 		}
 	}
 }

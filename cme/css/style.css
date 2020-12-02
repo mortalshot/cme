@@ -297,6 +297,11 @@ img {
   display: none;
 }
 
+.header__menu {
+  position: relative;
+  z-index: 3;
+}
+
 .header__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -695,6 +700,13 @@ img {
       -ms-transform: translate(0, -133px);
           transform: translate(0, -133px);
   margin-bottom: -133px;
+  position: relative;
+}
+
+.main__logo {
+  position: absolute;
+  top: 45px;
+  z-index: 3;
 }
 
 .main__slider::before {
@@ -723,6 +735,7 @@ img {
   -webkit-transform: translate(-50%, 0);
       -ms-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
+  z-index: 1;
 }
 
 .main__slider .slick-dots li {
@@ -1193,6 +1206,282 @@ img {
   }
 }
 
+@media screen and (min-width: 1921px) {
+  .main__logo {
+    left: 177px;
+  }
+}
+
+@media screen and (min-width: 2200px) {
+  body {
+    font-size: 24px;
+    line-height: 40px;
+  }
+
+  .container {
+    max-width: 1620px;
+  }
+
+  .header--main .container {
+    padding-left: 384px;
+  }
+
+  .header__item {
+    margin-right: 90px;
+  }
+
+  .header__link {
+    font-size: 24px;
+    line-height: 33px;
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 12px 22px;
+  }
+
+  .footer__top {
+    padding: 30px 0;
+  }
+
+  .footer__logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 141px;
+            flex: 0 0 141px;
+    margin-right: 357px;
+  }
+
+  .footer__logo svg {
+    width: 141px;
+    height: 80px;
+  }
+
+  .footer__link {
+    font-size: 24px;
+    line-height: 33px;
+  }
+
+  .main__slider .slick-dots {
+    bottom: 83px;
+  }
+
+  .main__slider .slick-dots li {
+    margin-right: 10px;
+  }
+
+  .main__slider .slick-dots li button {
+    width: 76px;
+    height: 14px;
+  }
+
+  .main__item {
+    min-height: 800px;
+  }
+
+  .main__container {
+    padding-left: 384px;
+  }
+
+  .main__body {
+    padding: 68px 0 139px;
+  }
+
+  .main__title {
+    font-size: 96px;
+    line-height: 88px;
+    margin-bottom: 20px;
+  }
+
+  .main__title span {
+    font-size: 72px;
+    line-height: 98px;
+  }
+
+  .main__option {
+    font-size: 24px;
+    line-height: 40px;
+  }
+
+  .main__option::before {
+    width: 15px;
+    height: 15px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 15px;
+            flex: 0 0 15px;
+    margin-top: 15px;
+  }
+
+  .main__btn {
+    margin: 47px 0px 0px 0px;
+  }
+
+  .schedule::before {
+    max-width: 628px;
+    height: 509px;
+  }
+
+  .schedule::after {
+    width: 838px;
+  }
+
+  .schedule__container {
+    padding-left: 384px;
+  }
+
+  .schedule__content {
+    padding: 46px 0 52px 8px;
+  }
+
+  .schedule__left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 82%;
+            flex: 0 0 82%;
+  }
+
+  .schedule__option::before {
+    width: 18px;
+    height: 18px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 18px;
+            flex: 0 0 18px;
+    margin: 13px 18px 0 0;
+  }
+
+  .schedule__option {
+    line-height: 33px;
+    max-width: 810px;
+    margin-bottom: 38px;
+  }
+
+  .schedule__title {
+    font-size: 36px;
+    line-height: 49px;
+    margin-bottom: 8px;
+  }
+
+  .schedule__worktime {
+    margin-bottom: 10px;
+  }
+
+  .schedule__support {
+    font-size: 20px;
+    line-height: 27px;
+    margin: 25px 0 7px 0;
+    max-width: 303px;
+  }
+
+  .schedule__phone {
+    font-size: 36px;
+    line-height: 49px;
+    margin-bottom: 21px;
+  }
+
+  .schedule__btn {
+    padding: 12px 41px;
+  }
+
+  .schedule__btn::before {
+    margin-right: 9px;
+  }
+
+  .service {
+    padding: 80px 0 49px;
+  }
+
+  .service--reverse .service__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+
+  .service__content {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 55%;
+            flex: 0 0 55%;
+  }
+
+  .service__title {
+    font-size: 72px;
+    line-height: 98px;
+    margin-bottom: 21px;
+    max-width: 1000px;
+  }
+
+  .service__subtitle {
+    font-size: 36px;
+    line-height: 49px;
+    margin-bottom: 30px;
+  }
+
+  .service__options {
+    padding-left: 56px;
+    margin-bottom: 47px;
+  }
+
+  .service__item {
+    margin-bottom: 0;
+  }
+
+  .map {
+    margin-bottom: -11px;
+  }
+
+  .map__description {
+    max-width: 579px;
+    padding: 46px 50px 50px;
+    top: 34.6%;
+    left: 25.3%;
+  }
+
+  .map__title {
+    font-size: 48px;
+    line-height: 65px;
+    margin-bottom: 15px;
+  }
+
+  .map__contact--address {
+    margin-bottom: 26px;
+  }
+
+  .map__label {
+    line-height: 33px;
+  }
+
+  .map iframe {
+    height: 811px;
+  }
+}
+
+@media screen and (min-width: 2300px) {
+  .main__logo {
+    left: 216px;
+    top: 70px;
+  }
+
+  .main__logo svg {
+    width: 424px;
+    height: 231px;
+  }
+
+  .main__slider::before {
+    background: url(../img/slider/main-bg-xl.svg) no-repeat center/cover;
+    width: 1072px;
+    height: 800px;
+  }
+
+  .schedule::before {
+    max-width: 708px;
+    height: 579px;
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  .schedule::before {
+    max-width: 778px;
+    height: 629px;
+  }
+}
+
 @media screen and (max-width: 1920px) {
   body {
     font-size: calc(12px + 6 * ((100vw - 320px) / (1920 - 320)));
@@ -1207,6 +1496,10 @@ img {
   .footer__link {
     font-size: calc(12px + 6 * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(25 / 18);
+  }
+
+  .main__logo {
+    left: calc((100vw - 1920px) / 2.5 + 178px);
   }
 
   .main__slider::before {
@@ -1277,6 +1570,10 @@ img {
     padding-left: 250px;
   }
 
+  .main__logo {
+    left: 14px;
+  }
+
   .main__slider::before {
     left: -170px;
   }
@@ -1336,6 +1633,11 @@ img {
         -ms-transform: translate(0, -66px);
             transform: translate(0, -66px);
     margin-bottom: -66px;
+  }
+
+  .main__logo svg {
+    width: 195px;
+    height: 111px;
   }
 
   .main__slider::before {
@@ -1459,6 +1761,15 @@ img {
 
   .footer__bottom {
     padding: 3px 0;
+  }
+
+  .main__logo {
+    left: 50px;
+  }
+
+  .main__logo svg {
+    width: 126px;
+    height: 72px;
   }
 
   .main__slider::before {
@@ -1812,6 +2123,15 @@ img {
             flex: 0 0 100%;
     background-color: #fff;
     padding: 3px 15px 0;
+  }
+
+  .main__logo {
+    left: 14px;
+  }
+
+  .main__logo svg {
+    width: 66px;
+    height: 38px;
   }
 
   .main__slider::before {

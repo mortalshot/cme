@@ -2,6 +2,9 @@
 	padding: 45px 0;
 	overflow: hidden;
 
+	@media screen and (min-width: 2200px) {
+		padding: 80px 0 49px;
+	}
 	@media screen and (max-width: 575px) {
 		position: relative;
 	}
@@ -54,6 +57,10 @@
 
 			&__image {
 				flex: 0 0 42%;
+
+				@media screen and (min-width: 2200px) {
+					flex: 0 0 50%;
+				}
 			}
 		}
 	}
@@ -70,6 +77,9 @@
 		flex: 0 0 52%;
 		padding-right: 15px;
 
+		@media screen and (min-width: 2200px) {
+			flex: 0 0 55%;
+		}
 		@media screen and (max-width: 1200px) {
 			flex: 0 0 60%;
 		}
@@ -89,6 +99,12 @@
 		text-transform: uppercase;
 		max-width: 600px;
 
+		@media screen and (min-width: 2200px) {
+			font-size: 72px;
+			line-height: 98px;
+			margin-bottom: 21px;
+			max-width: 1000px;
+		}
 		@media screen and (max-width: $layoutDesktop + "px") {
 			font-size: calc(24px + 28 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 			line-height: calc(56 / 52);
@@ -101,6 +117,12 @@
 		line-height: 33px;
 		margin-bottom: 16px;
 
+
+		@media screen and (min-width: 2200px) {
+			font-size: 36px;
+			line-height: 49px;
+			margin-bottom: 30px;
+		}
 		@media screen and (max-width: $layoutDesktop + "px") {
 			font-size: calc(12px + 12 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 			line-height: calc(33 / 24);
@@ -128,6 +150,10 @@
 			}
 		}
 
+		@media screen and (min-width: 2200px) {
+			padding-left: 56px;
+			margin-bottom: 47px;
+		}
 		@media screen and (max-width: 1200px) {
 			padding-left: 36px;
 		}
@@ -145,6 +171,9 @@
 			margin-bottom: 0;
 		}
 
+		@media screen and (min-width: 2200px) {
+			margin-bottom: 0;
+		}
 		@media screen and (max-width: 767px) {
 			margin-bottom: 7px;
 		}
