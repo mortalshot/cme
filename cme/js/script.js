@@ -198,11 +198,13 @@ $('.header__burger').click(function (event) {
 })
 
 $(".header__search input").focus(function () {
-    $('.header__menu').fadeOut(300);
+    $('.header__list').fadeOut(300);
+    $('.header__search').css({ 'width': '100%' });
 });
 
 $(".header__search input").focusout(function () {
-    $('.header__menu').fadeIn(300);
+    $('.header__list').fadeIn(300);
+    $('.header__search').css({ 'width': '80px' });
 });
 $('.main__slider').slick({
     autoplay: false,
