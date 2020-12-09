@@ -10,7 +10,7 @@ body {
         font-size: 24px;
         line-height: 40px;
     }
-    @media screen and (max-width: $layoutDesktop + 'px') {
+    @media screen and (max-width: $layoutDesktop + "px") {
         font-size: calc(12px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
         line-height: calc(25 / 18);
     }
@@ -54,3 +54,88 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+p {
+    font-weight: 700;
+    margin: 1.3em 0;
+}
+
+ul {
+    padding-left: 19px;
+    
+    li {
+        padding-left: 31px;
+        position: relative;
+        margin-bottom: 1.3em;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 12px;
+            height: 12px;
+            flex: 0 0 12px;
+            background: url(../img/icons/setting.svg) no-repeat center/cover;
+            margin: 8px 13px 0 0;
+            position: absolute;
+            left: 0;
+        }
+
+        &.item-has-children {
+            ul {
+                margin-top: 1em;
+                padding: 0;
+
+                li {
+                    font-weight: 400;
+                    padding-left: 19px;
+                    margin-bottom: 0.7em;
+
+                    &::before {
+                        width: 9px;
+                        height: 2px;
+                        background: $Red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+a {
+    color: $Black;
+    text-decoration: underline;
+    transition: 0.3s ease all 0s;
+
+    @media screen and (min-width: 992px) {
+        &:hover {
+            color: $Red;
+        }
+    }
+}
+
+.media-text {
+    display: flex;
+
+    &__image {
+        flex: 1 1 auto;
+        position: relative;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        flex: 0 0 50%;
+        padding-left: 30px;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+

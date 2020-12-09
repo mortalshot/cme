@@ -1,0 +1,43 @@
+.about-main {
+	&__content {
+		position: relative;
+		max-width: 495px;
+		padding: 20px 0 20px 47px;
+		color: $White;
+
+		@media screen and (max-width: 1200px) {
+			max-width: 366px;
+			padding-left: 64px;
+		}
+		@media screen and (max-width: 991px) {
+			max-width: 312px;
+			padding-left: 28px;
+		}
+		@media screen and (max-width: 500px) {
+			max-width: 189px;
+			padding-left: 15px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 18px;
+		text-transform: uppercase;
+
+		span {
+			display: block;
+			font-weight: 400;
+			font-size: 48px;
+			line-height: 65px;
+
+			@media screen and (max-width: $layoutDesktop + "px") {
+				font-size: calc(18px + 30 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+				line-height: calc(65 / 48);
+			}
+		}
+	}
+
+	&__text {
+		font-size: calc(12px + 10 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(30 / 22);
+	}
+}

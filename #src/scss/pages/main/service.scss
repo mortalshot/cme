@@ -167,6 +167,7 @@
 
 	&__item {
 		margin-bottom: 11px;
+		padding: 0;
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -179,6 +180,10 @@
 		}
 		@media screen and (max-width: 575px) {
 			margin-bottom: 5px;
+		}
+
+		&::before {
+			display: none;
 		}
 	}
 

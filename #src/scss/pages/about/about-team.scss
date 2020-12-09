@@ -1,0 +1,33 @@
+.about-team {
+	&__content {
+		position: relative;
+		max-width: 444px;
+		padding: 20px 135px 20px 0;
+		color: $White;
+		margin-left: auto;
+
+		@media screen and (max-width: 1200px) {
+			max-width: 316px;
+			padding-right: 60px;
+		}
+		@media screen and (max-width: 991px) {
+			max-width: 222px;
+			padding-right: 30px;
+		}
+		@media screen and (max-width: 500px) {
+			max-width: 160px;
+			padding-right: 15px;
+		}
+	}
+
+	&__title {
+		color: $White;
+		text-transform: uppercase;
+		text-align: right;
+
+		span {
+			display: block;
+			font-weight: 400;
+		}
+	}
+}

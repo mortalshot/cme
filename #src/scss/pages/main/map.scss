@@ -1,12 +1,7 @@
 .map {
-	position: relative;
-	margin-bottom: -6px;
-
-	@media screen and (min-width: 2200px) {
-		margin-bottom: -11px;
-	}
-
 	&__wrapper {
+		position: relative;
+		
 		iframe {
 			@media screen and (max-width: 1200px) {
 				height: 440px;
@@ -119,11 +114,97 @@
 
 	&__link {
 		color: $Black;
+		text-decoration: none;
+	}
+
+	&__schedule {
+		margin-top: 16px;
+
+		.schedule__worktime-wrapper {
+			display: block;
+			margin: 0;
+		}
 	}
 
 	iframe {
+		vertical-align: middle;
+
 		@media screen and (min-width: 2200px) {
 			height: 811px;
+		}
+	}
+
+	&--contacts {
+		.map__wrapper {
+			@media screen and (max-width: 575px) {
+				display: flex;
+				flex-direction: column-reverse;
+			}
+		}
+
+		.map__description {
+			@media screen and (max-width: 575px) {
+				padding: 20px 15px;
+			}
+		}
+	}
+
+	&__support {
+		padding: 35px 15px;
+		display: flex;
+		align-items: center;
+
+		@media screen and (max-width: 575px) {
+			flex-direction: column;
+			background-color: $LGray2;
+		}
+
+		.schedule__support-wrapper {
+			margin: 0;
+			display: flex;
+			align-items: center;
+
+			@media screen and (max-width: 767px) {
+				flex-direction: column;
+				align-items: flex-start;
+				padding-right: 20px;
+			}
+			@media screen and (max-width: 575px) {
+				padding: 0;
+				align-items: center;
+			}
+		}
+
+		.schedule__support {
+			max-width: 100%;
+			margin: 0;
+
+			@media screen and (max-width: 575px) {
+				margin-bottom: 13px;
+			}
+		}
+
+		.schedule__phone {
+			margin: 0px 30px 0px 26px;
+
+			@media screen and (max-width: 767px) {
+				margin: 0;
+			}
+			@media screen and (max-width: 575px) {
+				margin-bottom: 25px;
+				position: relative;
+				display: inline-flex;
+				align-items: center;
+
+				&::after {
+					content: "";
+					display: block;
+					width: 32px;
+					height: 32px;
+					background: url(../img/icons/phone.svg) no-repeat center/cover;
+					margin-left: 7px;
+				}
+			}
 		}
 	}
 }

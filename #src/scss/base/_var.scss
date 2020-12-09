@@ -3,12 +3,13 @@ $size-container: 1180px;
 $layoutDesktop: 1920;
 $layoutMobile: 320;
 $size-header-height: 133px;
-$size-header-height-md: 66px;
+$size-header-height-md: 100px;
+$size-header-height-sm: 80px;
 $size-header-height-mobile: 50px;
 
 // === Font ===
 $font: "Open Sans";
-$fontWeight: 400;
+$fontWeight: 700;
 $fontSize: 18px;
 $lineHeight: 25px;
 $fontColor: #373738;
@@ -16,6 +17,7 @@ $fontColor: #373738;
 // === Color ===
 $White: #fff;
 $LGray: #f3f3f3;
-$DGray: #8A8A8A;
+$LGray2: #f0f0f0;
+$DGray: #8a8a8a;
 $Black: #373738;
 $Red: #e42a2c;
