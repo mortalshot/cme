@@ -6,4 +6,5 @@
 @@include('components/webp.js')
 @@include('components/menu.js')
 @@include('components/slider.js')
+@@include('components/filter.js')
 

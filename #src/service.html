@@ -1,0 +1,44 @@
+@@include('html-components/_header.html', {
+"title": "Услуги",
+"headerclass": ""
+})
+
+<main class="site__main">
+	<section class="service">
+		@@include('html-components/breadcrumbs.html', {
+		"breadcrumbs__title": "Услуги",
+		})
+		<div class="service__filter filter">
+			<div class="filter__container container">
+				<div class="filter__car">
+					<div class="filter__label filter__label--car">Марка автомобиля:</div>
+				</div>
+				<div class="filter__service">
+					<div class="filter__label filter__label--service">Популярные услуги:</div>
+					<div class="filter__items">
+						<a href="" class="filter__item"><div class="filter__item-wrapper">Диагностика</div></a>
+						<a href="" class="filter__item"><div class="filter__item-wrapper">Техническое обслуживание</div></a>
+						<a href="" class="filter__item"><div class="filter__item-wrapper">Кузовные работы</div></a>
+						<a href="" class="filter__item"><div class="filter__item-wrapper">Ремонт двигателя</div></a>
+						<a href="" class="filter__item"><div class="filter__item-wrapper">Ремонт АКПП</div></a>
+						<a href="" class="filter__item"><div class="filter__item-wrapper">Ремонт \ Установка электрооборудования</div></a>
+						<a href="" class="filter__item"><div class="filter__item-wrapper">Шиномонтаж</div></a>
+						<a href="" class="filter__item"><div class="filter__item-wrapper">Тюнинг двигателя</div></a>
+						<a href="" class="filter__item"><div class="filter__item-wrapper">Замена узлов и агрегатов</div></a>
+						<a href="" class="filter__item"><div class="filter__item-wrapper">Диагностика</div></a>
+						<a href="" class="filter__item"><div class="filter__item-wrapper">Ремонт \ Установка электрооборудования</div></a>
+						<a href="" class="filter__item"><div class="filter__item-wrapper">Техническое обслуживание</div></a>
+						<a href="" class="filter__item"><div class="filter__item-wrapper">Ремонт двигателя</div></a>
+					</div>
+					<div class="filter__buttons">
+						<a href="" id="filterAll" class="filter__btn filter__all">Все услуги</a>
+						<a href="" class="filter__btn filter__reset">Сбросить фильтры</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div clas="service__content"></div>
+	</section>
+</main>
+
+@@include('html-components/_footer.html')

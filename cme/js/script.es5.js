@@ -1066,4 +1066,57 @@ $(document).ready(function () {
     // ]
 
   });
+  $('.news__cards').slick({
+    autoplay: false,
+    infinite: false,
+    slidesToShow: 3,
+    arrows: false,
+    dots: true,
+    responsive: [// {
+    //     breakpoint: 768,
+    //     settings: {
+    //         slidesToShow: 3,
+    //         arrows: true,
+    //     }
+    // },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+        arrows: true
+      }
+    }]
+  });
+  var item = $('.filter__item');
+  var items = $('.filter__items');
+  var showBtn = $('#filterAll');
+  var resetBtn = $('.filter__reset');
+  var itemHeight = $('.filter__item').innerHeight();
+  items.css({
+    "max-height": itemHeight * 2
+  });
+  showBtn.click(function (e) {
+    e.preventDefault();
+    $(this).toggleClass('_active');
+
+    if (!items.hasClass('_show')) {
+      items.animate({
+        "max-height": "300px"
+      });
+    } else {
+      items.animate({
+        "max-height": itemHeight * 2
+      });
+    }
+
+    items.toggleClass('_show');
+  });
+  item.click(function (e) {
+    e.preventDefault();
+    $(this).toggleClass('_active');
+  });
+  resetBtn.click(function (e) {
+    e.preventDefault();
+    $('.filter__item').removeClass('_active');
+  });
 });
