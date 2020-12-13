@@ -414,7 +414,7 @@ a {
   padding-bottom: calc(10px + 5 * ((100vw - 320px) / (1600)));
   text-align: left;
   border-bottom: 4px solid #e42a2c;
-  min-width: calc(104px + 151 * ((100vw - 320px) / (1600)));
+  min-width: calc(74px + 20 * ((100vw - 320px) / (1600)));
 }
 
 .block-table table tbody tr:last-child td {
@@ -430,7 +430,7 @@ a {
   padding-right: calc(5px + 4 * ((100vw - 320px) / (1600)));
   padding-bottom: calc(8px + 7 * ((100vw - 320px) / (1600)));
   padding-left: calc(5px + 4 * ((100vw - 320px) / (1600)));
-  min-width: 200px;
+  min-width: calc(74px + 20 * ((100vw - 320px) / (1600)));
 }
 
 .block-table figcaption {
@@ -1740,6 +1740,14 @@ h3 {
   height: 11px;
   margin-right: 7px;
   background: url(../img/icons/btn-more-red.svg) no-repeat center/cover;
+}
+
+.service__content {
+  padding-top: calc(20px + 6 * ((100vw - 320px) / (1600)));
+}
+
+.service__item {
+  display: none;
 }
 
 .filter {

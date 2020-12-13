@@ -25,7 +25,16 @@
 .service {
 	&__filter {
 	}
+
+	&__content {
+		@include adaptiv-value("padding-top", 26, 20, 0);
+	}
+
+	&__item {
+		display: none;
+	}
 }
+
 .filter {
 	background-color: $LGray2;
 	@include adaptiv-value("padding-top", 27, 20, 0);
