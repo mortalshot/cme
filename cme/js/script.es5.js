@@ -1047,24 +1047,7 @@ $(document).ready(function () {
     infinite: true,
     slidesToShow: 1,
     arrows: false,
-    dots: true // responsive: [
-    //     {
-    //         breakpoint: 768,
-    //         settings: {
-    //             slidesToShow: 3,
-    //             arrows: true,
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 576,
-    //         settings: {
-    //             rows: 2,
-    //             slidesToShow: 2,
-    //             arrows: true,
-    //         }
-    //     },
-    // ]
-
+    dots: true
   });
   $('.news__cards').slick({
     autoplay: false,
@@ -1072,21 +1055,25 @@ $(document).ready(function () {
     slidesToShow: 3,
     arrows: false,
     dots: true,
-    responsive: [// {
-    //     breakpoint: 768,
-    //     settings: {
-    //         slidesToShow: 3,
-    //         arrows: true,
-    //     }
-    // },
-    {
+    responsive: [{
       breakpoint: 576,
       settings: {
         slidesToShow: 1,
-        arrows: true
+        arrows: true,
+        adaptiveHeight: true
       }
     }]
   });
+  mediaQuerySmMax = window.matchMedia('(max-width: 575px)');
+
+  if (mediaQuerySmMax.matches) {
+    // Ширина точек слайдера каталога
+    var slidesNumber = $('.news__card').length;
+    var slidesClonedNumber = $('.news__card.slick-cloned').length;
+    var dotsWidth = 100 / (slidesNumber - slidesClonedNumber);
+    $('.news__cards .slick-dots li').width(dotsWidth + '%');
+  }
+
   var item = $('.filter__item');
   var items = $('.filter__items');
   var showBtn = $('#filterAll');

@@ -4,23 +4,6 @@ $('.main__slider').slick({
     slidesToShow: 1,
     arrows: false,
     dots: true,
-    // responsive: [
-    //     {
-    //         breakpoint: 768,
-    //         settings: {
-    //             slidesToShow: 3,
-    //             arrows: true,
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 576,
-    //         settings: {
-    //             rows: 2,
-    //             slidesToShow: 2,
-    //             arrows: true,
-    //         }
-    //     },
-    // ]
 });
 
 $('.news__cards').slick({
@@ -30,19 +13,23 @@ $('.news__cards').slick({
     arrows: false,
     dots: true,
     responsive: [
-        // {
-        //     breakpoint: 768,
-        //     settings: {
-        //         slidesToShow: 3,
-        //         arrows: true,
-        //     }
-        // },
         {
             breakpoint: 576,
             settings: {
                 slidesToShow: 1,
                 arrows: true,
+                adaptiveHeight: true,
             }
         },
     ]
 });
+
+mediaQuerySmMax = window.matchMedia('(max-width: 575px)');
+
+if (mediaQuerySmMax.matches) {
+    // Ширина точек слайдера каталога
+    let slidesNumber = $('.news__card').length;
+    let slidesClonedNumber = $('.news__card.slick-cloned').length;
+    let dotsWidth = 100 / (slidesNumber - slidesClonedNumber);
+    $('.news__cards .slick-dots li').width(dotsWidth + '%');
+}
