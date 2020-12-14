@@ -41,49 +41,29 @@
 
     // .form__input
     &__input {
-        height: 50px;
-        padding: 0px 20px;
+        height: 36px;
+        padding: 8px 10px;
         border-radius: 5px;
         width: 100%;
         font-size: 18px;
         transition: all 0.5s ease 0s;
 
-        &:focus {
-            box-shadow: 0 0 15px #7a956b;
+        &::placeholder {
+            transition: 0.3s ease all 0s;
         }
 
-        &._error {
-            box-shadow: 0 0 15px red;
+        &:focus {
+            &::placeholder {
+                opacity: 0;
+            }
         }
     }
 
     // .form__button
     &__button {
-        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 60px;
-        background-color: #7a956b;
-        color: #fff;
-        font-size: 18px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-weight: 700;
-        cursor: pointer;
-        border-radius: 20px;
-        box-shadow: 0 5px 0 #161b13;
-        transition: background-color 0.5s ease 0s;
-        position: relative;
-        top: 0;
-
-        &:hover {
-            background-color: #4f6146;
-        }
-        &:active {
-            top: 3px;
-            box-shadow: 0 2px 0 #161b13;
-        }
     }
 }
 

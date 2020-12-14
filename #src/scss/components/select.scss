@@ -15,9 +15,9 @@
 
     &__value {
         display: flex;
-        font-size: 16px;
-        height: 50px;
-        padding: 0px 20px;
+        font-size: 14px;
+        height: 36px;
+        padding: 8px 10px;
         align-items: center;
         justify-content: space-between;
         flex-direction: row-reverse;
@@ -25,13 +25,13 @@
             content: "";
             display: inline-block;
             transition: all 0.3s ease 0s;
-            width: 11px;
+            width: 12px;
             height: 7px;
-            background: url("../img/select.svg") center / 100% no-repeat;
+            background: url("../img/icons/service/chevron.svg") center / 100% no-repeat;
         }
 
         span {
-            height: 1em;
+            height: 1.4em;
             overflow: hidden;
             display: -webkit-box;
             -webkit-line-clamp: 1;
@@ -40,24 +40,24 @@
     }
 
     &__options {
-        color: #000;
+        color: $White;
         display: none;
         position: absolute;
-        top: 49px;
+        bottom: 0;
+        left: 0;
+        transform: translate(0, 100%);
         border-radius: 0 0 4px 4px;
         min-width: 100%;
-        left: 0;
-        background-color: #fff;
+        background-color: $Black;
+        border: 1px solid $DGray;
         border-top: 0;
-        border: 1px solid #d9d9d9;
-        border-top: 0;
-        font-size: 16px;
+        font-size: 14px;
         padding: 0px 0px 5px 0px;
     }
 
     &__option {
         cursor: pointer;
-        padding: 10px 20px;
+        padding: 8px 10px;
         margin: 0px 0px 0px 0px;
     }
 

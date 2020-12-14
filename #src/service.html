@@ -4,11 +4,11 @@
 })
 
 <main class="site__main">
-	<section class="service">
+	<section class="service-page">
 		@@include('html-components/breadcrumbs.html', {
 		"breadcrumbs__title": "Услуги",
 		})
-		<div class="service__filter filter">
+		<div class="service-page__filter filter">
 			<div class="filter__container container">
 				<div class="filter__car">
 					<div class="filter__label filter__label--car">Марка автомобиля:</div>
@@ -16,19 +16,45 @@
 				<div class="filter__service">
 					<div class="filter__label filter__label--service">Популярные услуги:</div>
 					<div class="filter__items">
-						<a href="#volvo-xs90-diagnostics" class="filter__item"><div class="filter__item-wrapper">Диагностика</div></a>
-						<a href="#volvo-xs90-maintenance" class="filter__item"><div class="filter__item-wrapper">Техническое обслуживание</div></a>
-						<a href="" class="filter__item"><div class="filter__item-wrapper">Кузовные работы</div></a>
-						<a href="" class="filter__item"><div class="filter__item-wrapper">Ремонт двигателя</div></a>
-						<a href="" class="filter__item"><div class="filter__item-wrapper">Ремонт АКПП</div></a>
-						<a href="" class="filter__item"><div class="filter__item-wrapper">Ремонт \ Установка электрооборудования</div></a>
-						<a href="#volvo-xs90-tireFitting" class="filter__item"><div class="filter__item-wrapper">Шиномонтаж</div></a>
-						<a href="" class="filter__item"><div class="filter__item-wrapper">Тюнинг двигателя</div></a>
-						<a href="" class="filter__item"><div class="filter__item-wrapper">Замена узлов и агрегатов</div></a>
-						<a href="#volvo-xs90-diagnostics" class="filter__item"><div class="filter__item-wrapper">Диагностика</div></a>
-						<a href="" class="filter__item"><div class="filter__item-wrapper">Ремонт \ Установка электрооборудования</div></a>
-						<a href="#volvo-xs90-maintenance" class="filter__item"><div class="filter__item-wrapper">Техническое обслуживание</div></a>
-						<a href="#volvo-xs90-tireFitting" class="filter__item"><div class="filter__item-wrapper">Шиномонтаж</div></a>
+						<a href="#volvo-xs90-diagnostics" class="filter__item">
+							<div class="filter__item-wrapper">Диагностика</div>
+						</a>
+						<a href="#volvo-xs90-maintenance" class="filter__item">
+							<div class="filter__item-wrapper">Техническое обслуживание</div>
+						</a>
+						<a href="#volvo-xs90-tireFitting" class="filter__item">
+							<div class="filter__item-wrapper">Шиномонтаж</div>
+						</a>
+						<a href="" class="filter__item">
+							<div class="filter__item-wrapper">Кузовные работы</div>
+						</a>
+						<a href="" class="filter__item">
+							<div class="filter__item-wrapper">Ремонт двигателя</div>
+						</a>
+						<a href="" class="filter__item">
+							<div class="filter__item-wrapper">Ремонт АКПП</div>
+						</a>
+						<a href="" class="filter__item">
+							<div class="filter__item-wrapper">Ремонт \ Установка электрооборудования</div>
+						</a>
+						<a href="" class="filter__item">
+							<div class="filter__item-wrapper">Тюнинг двигателя</div>
+						</a>
+						<a href="" class="filter__item">
+							<div class="filter__item-wrapper">Замена узлов и агрегатов</div>
+						</a>
+						<a href="" class="filter__item">
+							<div class="filter__item-wrapper">Диагностика</div>
+						</a>
+						<a href="" class="filter__item">
+							<div class="filter__item-wrapper">Ремонт \ Установка электрооборудования</div>
+						</a>
+						<a href="" class="filter__item">
+							<div class="filter__item-wrapper">Техническое обслуживание</div>
+						</a>
+						<a href="" class="filter__item">
+							<div class="filter__item-wrapper">Шиномонтаж</div>
+						</a>
 					</div>
 					<div class="filter__buttons">
 						<a href="" id="filterAll" class="filter__btn filter__all">Все услуги</a>
@@ -37,10 +63,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="service__content">
+		<div class="service-page__content">
 			<div class="container">
-				<div class="service__items">
-					<div id="volvo-xs90-diagnostics" class="service__item">
+				<div class="service-page__items">
+					<div id="volvo-xs90-diagnostics" class="service-page__item">
 						<h2>Диагностика</h2>
 						<figure class="block-table">
 							<table>
@@ -72,7 +98,7 @@
 							<figcaption><span>*</span> при его наличии в автомобиле</figcaption>
 						</figure>
 					</div>
-					<div id="volvo-xs90-maintenance" class="service__item">
+					<div id="volvo-xs90-maintenance" class="service-page__item">
 						<h2>Техническое обслуживание</h2>
 						<figure class="block-table">
 							<table>
@@ -104,7 +130,7 @@
 							<figcaption><span>*</span> при его наличии в автомобиле</figcaption>
 						</figure>
 					</div>
-					<div id="volvo-xs90-tireFitting" class="service__item">
+					<div id="volvo-xs90-tireFitting" class="service-page__item">
 						<h2>Шиномонтаж</h2>
 						<figure class="block-table">
 							<table>
@@ -174,22 +200,64 @@
 				</div>
 			</div>
 		</div>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
+
+		<div class="service-page__request service-request">
+			<div class="service-request__container container">
+				<div class="service-request__row row">
+					<div class="service-request__content">
+						<div class="service-request__content-wrapper">
+							<h2 class="service-request__title title-h2">Записаться на осмотр</h2>
+							<div class="service-request__text">Заполните эту форму и в самое ближайшее время с вами свяжется наш
+								сотрудник, который уточнит все детали и согласует с вами время осмотра</div>
+							<div class="service-request__contact" data-da="service-request__row, last, 991">
+								<div class="service-request__label">Или свяжитесь с нами по телефону:</div>
+								<a href="tel:+79646226464" class="service-request__link"><span>+7 (964)</span> 622-64-64</a>
+								<div class="service-request__descr">(круглосуточно)</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="service-request__form form">
+						<form action="#" id="form" class="form__body">
+							<div class="form__item">
+								<label for="serviceName" class="form__label">Ваше имя*:</label>
+								<input id="serviceName" type="text" name="name" class="form__input">
+							</div>
+							<div class="form__item">
+								<label for="serviceEmail" class="form__label">Контактный телефон*:</label>
+								<input id="serviceEmail" type="text" name="phone" class="form__input form__input--phone"
+									placeholder="+7 (___) ___-__-__">
+							</div>
+							<div class="form__item">
+								<label for="serviceEmail" class="form__label">Модель авто и год выпуска*:</label>
+								<input id="serviceEmail" type="text" name="phone" class="form__input form__input--phone"
+									placeholder="Volvo XC 90 ( 2007), T2.5, AWD">
+							</div>
+
+							<div class="form__item">
+								<div class="form__label">Тип работ:</div>
+								<select name="workType" class="form__select">
+									<option value="Комплексная диагностика" selected>Комплексная диагностика</option>
+									<option value="Кузовные работы">Кузовные работы</option>
+									<option value="Замена узлов и агрегатов">Замена узлов и агрегатов</option>
+								</select>
+							</div>
+							<div class="form__item form__item--full form__item--center">
+								<button type="submit" class="form__button btn">
+									<i class="icon-send"></i>
+									<span>Отправить</span>
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<p>С другой стороны укрепление и развитие структуры обеспечивает участие в формировании систем массового участия. Равным образом консультация с широким активом требуют определения и уточнения модели развития. Разнообразный и богатый опыт консультация с широким активом обеспечивает широкому кругу. <br>
+			Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке модели развития. Таким образом реализация намеченных плановых заданий позволяет оценить значение новых предложений.</p>
+		</div>
 	</section>
 </main>
 

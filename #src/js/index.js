@@ -7,4 +7,5 @@
 @@include('components/menu.js')
 @@include('components/slider.js')
 @@include('components/filter.js')
+@@include('components/select.js')
 
