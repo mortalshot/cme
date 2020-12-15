@@ -2,6 +2,22 @@ const item = $('.filter__item');
 const items = $('.filter__items');
 const showBtn = $('#filterAll');
 const resetBtn = $('.filter__reset');
+let select = $('.filter-select__title');
+
+select.click(function (e) {
+    select.not($(this)).removeClass('_active');
+    select.not($(this)).closest('.filter-select').children('.filter-select__options').removeClass('_active');
+    $(this).toggleClass('_active');
+    $(this).closest('.filter-select').children('.filter-select__options').toggleClass('_active');
+});
+
+$(document).mouseup(function (e) {
+    if (!select.is(e.target)
+        && select.has(e.target).length === 0) {
+            $('.filter-select__options').removeClass('_active');
+            select.removeClass('_active');
+    }
+});
 
 
 mediaQuerySmMax = window.matchMedia('(max-width: 575px)');

@@ -1078,6 +1078,19 @@ $(document).ready(function () {
   var items = $('.filter__items');
   var showBtn = $('#filterAll');
   var resetBtn = $('.filter__reset');
+  var select = $('.filter-select__title');
+  select.click(function (e) {
+    select.not($(this)).removeClass('_active');
+    select.not($(this)).closest('.filter-select').children('.filter-select__options').removeClass('_active');
+    $(this).toggleClass('_active');
+    $(this).closest('.filter-select').children('.filter-select__options').toggleClass('_active');
+  });
+  $(document).mouseup(function (e) {
+    if (!select.is(e.target) && select.has(e.target).length === 0) {
+      $('.filter-select__options').removeClass('_active');
+      select.removeClass('_active');
+    }
+  });
   mediaQuerySmMax = window.matchMedia('(max-width: 575px)');
   mediaQuerySmMax.addListener(handleTabletChange);
 
@@ -1204,8 +1217,8 @@ $(document).ready(function () {
 
   function selects_init() {
     for (var index = 0; index < selects.length; index++) {
-      var select = selects[index];
-      select_init(select);
+      var _select = selects[index];
+      select_init(_select);
     } //select_callback();
 
 
@@ -1224,9 +1237,11 @@ $(document).ready(function () {
 
     if (!e.target.closest('.select')) {
       for (var index = 0; index < selects.length; index++) {
-        var select = selects[index];
-        var select_body_options = select.querySelector('.select__options');
-        select.classList.remove('_active');
+        var _select2 = selects[index];
+
+        var select_body_options = _select2.querySelector('.select__options');
+
+        _select2.classList.remove('_active');
 
         _slideUp(select_body_options, 100);
       }
@@ -1279,12 +1294,12 @@ $(document).ready(function () {
       var selects = document.querySelectorAll('.select');
 
       for (var index = 0; index < selects.length; index++) {
-        var _select = selects[index];
+        var _select3 = selects[index];
 
-        var _select_body_options = _select.querySelector('.select__options');
+        var _select_body_options = _select3.querySelector('.select__options');
 
-        if (_select != select_item.closest('.select')) {
-          _select.classList.remove('_active');
+        if (_select3 != select_item.closest('.select')) {
+          _select3.classList.remove('_active');
 
           _slideUp(_select_body_options, 100);
         }
@@ -1370,8 +1385,8 @@ $(document).ready(function () {
 
     if (selects) {
       for (var index = 0; index < selects.length; index++) {
-        var select = selects[index];
-        select_item(select);
+        var _select4 = selects[index];
+        select_item(_select4);
       }
     }
   }
