@@ -1,0 +1,15 @@
+.service-page {
+	&__filter {
+	}
+
+	&__content {
+		@include adaptiv-value("padding-top", 26, 20, 0);
+	}
+
+	&__item {
+		display: none;
+	}
+
+	&__request {
+	}
+}

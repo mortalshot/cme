@@ -1,0 +1,51 @@
+.pagination {
+	display: flex;
+	justify-content: center;
+
+	&__list {
+		display: flex;
+
+		li {
+			margin: 0;
+			padding: 0;
+			@include adaptiv-value("margin-right", 20, 10, 0);
+
+			&:last-child {
+				margin: 0;
+			}
+
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	&__page {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include adaptiv-value("width", 36, 30, 0);
+		@include adaptiv-value("height", 36, 30, 0);
+		background-color: $LGray2;
+		text-decoration: none;
+		color: $Black;
+		transition: 0.3s ease all 0s;
+	}
+
+	&__prev {
+		background-color: transparent;
+	}
+
+	&__page--current {
+		background-color: $Red;
+		color: $White;
+	}
+
+	&__page--dots {
+		background-color: transparent;
+	}
+
+	&__next {
+		background-color: transparent;
+	}
+}

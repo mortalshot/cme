@@ -1,0 +1,206 @@
+.service-request {
+	&__container {
+	}
+
+	&__row {
+		background-color: $Black;
+		color: $Gray2;
+		padding: 28px 15px 12px;
+		position: relative;
+
+		@media screen and (max-width: 991px) {
+			flex-direction: column;
+			@include adaptiv-value("padding-left", 200, 15, 1);
+			@include adaptiv-value("padding-right", 200, 15, 1);
+		}
+		@media screen and (max-width: 767px) {
+			margin: 0 -15px;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			width: 129px;
+			height: 100%;
+			background: url(../img/service-request-bg.svg) no-repeat center/cover;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+
+	&__content {
+		flex: 0 0 40%;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 16px;
+		padding-right: 20px;
+		position: relative;
+
+		@media screen and (min-width: $layoutDesktop + "px") {
+			font-size: calc(6px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+			line-height: calc(16 / 12);
+		}
+		@media screen and (max-width: 991px) {
+			text-align: center;
+			flex: 1 1 auto;
+			padding: 0;
+		}
+	}
+
+	&__content-wrapper {
+		max-width: 341px;
+
+		@media screen and (min-width: $layoutDesktop + "px") {
+			max-width: 77%;
+		}
+		@media screen and (max-width: 991px) {
+			max-width: 100%;
+		}
+	}
+
+	&__title {
+		text-transform: uppercase;
+		color: $White;
+		@include adaptiv-value("margin-bottom", 15, 1, 0);
+	}
+
+	&__text {
+		@include adaptiv-value("padding-bottom", 35, 24, 0);
+
+		@media screen and (max-width: 991px) {
+			padding: 0;
+		}
+	}
+
+	&__contact {
+		position: relative;
+
+		@media screen and (max-width: 991px) {
+			display: flex;
+			align-items: center;
+		}
+		@media screen and (max-width: 575px) {
+			flex-direction: column;
+		}
+	}
+
+	&__label {
+		@media screen and (max-width: 991px) {
+			margin-right: 18px;
+		}
+		@media screen and (max-width: 575px) {
+			margin: 0px 0px 13px 0px;
+		}
+	}
+
+	&__link {
+		font-size: calc(18px + 8 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+		line-height: calc(45 / 36);
+		color: $White;
+		font-weight: 400;
+		text-decoration: none;
+		display: inline-block;
+		margin-bottom: 1px;
+		white-space: nowrap;
+
+		@media screen and (max-width: 991px) {
+			margin: 0 19px 0 0;
+		}
+		@media screen and (max-width: 575px) {
+			margin: 0px 0px 6px 0px;
+		}
+
+		span {
+			font-weight: 300;
+		}
+	}
+
+	&__descr {
+	}
+
+	&__form {
+		flex: 1 1 auto;
+
+		.form {
+			&__body {
+				display: flex;
+				flex-wrap: wrap;
+				@include adaptiv-value("margin-left", -15, -6, 0);
+				@include adaptiv-value("margin-right", -15, -6, 0);
+			}
+
+			&__item {
+				flex: 0 0 50%;
+				padding: 9px 15px;
+				@include adaptiv-value("padding-left", 15, 6, 0);
+				@include adaptiv-value("padding-right", 15, 6, 0);
+				margin-bottom: 6px;
+
+				@media screen and (max-width: 575px) {
+					flex: 0 0 100%;
+				}
+
+				&--full {
+					flex: 0 0 100%;
+				}
+
+				&--center {
+					display: flex;
+					justify-content: center;
+				}
+			}
+
+			&__label {
+				font-size: 12px;
+				line-height: 16px;
+				color: $DGray;
+				margin-bottom: 6px;
+				padding-left: 4px;
+
+				@media screen and (min-width: $layoutDesktop + "px") {
+					font-size: calc(6px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+					line-height: calc(16 / 12);
+				}
+			}
+
+			&__input {
+				border: 1px solid #8a8a8a;
+				border-radius: 3px;
+				background-color: transparent;
+				color: $White;
+				font-weight: 300;
+				font-size: 14px;
+				line-height: 19px;
+
+				@media screen and (min-width: $layoutDesktop + "px") {
+					font-size: calc(6px + 8 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+					line-height: calc(19 / 14);
+				}
+			}
+
+			&__button {
+				i {
+					margin-right: 9px;
+				}
+
+				&::before {
+					display: none;
+				}
+			}
+		}
+
+		.select {
+			&__title {
+				background-color: transparent;
+				border-color: $DGray;
+				color: $White;
+				font-weight: 300;
+			}
+
+			&__options {
+				font-weight: 300;
+			}
+		}
+	}
+}
