@@ -2158,6 +2158,7 @@ textarea.form__input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0;
 }
 
 .pagination__list li {
@@ -2940,6 +2941,7 @@ textarea.form__input {
   border: 1px solid #f3f3f3;
   width: 42px;
   height: 42px;
+  text-decoration: none;
 }
 
 .about {
@@ -3777,6 +3779,111 @@ textarea.form__input {
      object-fit: cover;
 }
 
+.error {
+  padding-bottom: 100px;
+}
+
+.error .breadcrumbs__title {
+  display: none;
+}
+
+.error__wrapper {
+  max-width: 856px;
+}
+
+.error__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  text-transform: uppercase;
+  margin-bottom: 43px;
+}
+
+.error__image {
+  margin-bottom: 62px;
+}
+
+.error__form {
+  margin-bottom: 40px;
+}
+
+.error__form .error__text {
+  margin-bottom: 28px;
+}
+
+.error__form .form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.error__form .form__item {
+  margin-right: 30px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.333%;
+          flex: 0 0 33.333%;
+}
+
+.error__form .form__item:last-child {
+  margin-right: 0;
+}
+
+.error__form .form__label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 6px;
+  padding-left: 5px;
+  text-align: left;
+}
+
+.error__form .form__input {
+  border: 1px solid #8a8a8a;
+  border-radius: 3px;
+}
+
+.error__form .form__button {
+  width: 100%;
+  max-width: 204px;
+}
+
+.error__form .form__button::before {
+  display: none;
+}
+
+.error__form .form__button i {
+  margin-right: 12px;
+  font-size: 13px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.error__home {
+  margin-bottom: 62px;
+}
+
+.error__home a {
+  text-decoration: none;
+}
+
+.error__home i {
+  margin-right: 2px;
+  font-size: 16px;
+}
+
+.error__home i::before {
+  color: #e42a2c;
+}
+
+.error__home span {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 576px) {
   .news__title {
     height: calc(50px + 10 * ((100vw - 320px) / (1600)));
@@ -3864,6 +3971,11 @@ textarea.form__input {
   }
 
   .card-feedback__btn {
+    font-size: calc(6px + 6 * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(16 / 12);
+  }
+
+  .error__form .form__label {
     font-size: calc(6px + 6 * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(16 / 12);
   }
@@ -4276,6 +4388,13 @@ textarea.form__input {
   }
 }
 
+@media screen and (max-width: 1919.98px) {
+  .error__title {
+    font-size: calc(20px + 16 * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(49 / 36);
+  }
+}
+
 @media screen and (max-width: 1600px) {
   .header__item {
     margin-right: 40px;
@@ -4527,6 +4646,34 @@ textarea.form__input {
   .card-feedback__item {
     padding-right: calc(15px + 13 * ((100vw - 320px) / (1600)));
   }
+
+  .error {
+    padding-bottom: calc(40px + 60 * ((100vw - 320px) / (1600)));
+  }
+
+  .error__title {
+    margin-bottom: calc(20px + 23 * ((100vw - 320px) / (1600)));
+  }
+
+  .error__image {
+    margin-bottom: calc(25px + 37 * ((100vw - 320px) / (1600)));
+  }
+
+  .error__form {
+    margin-bottom: calc(20px + 20 * ((100vw - 320px) / (1600)));
+  }
+
+  .error__form .error__text {
+    margin-bottom: calc(15px + 13 * ((100vw - 320px) / (1600)));
+  }
+
+  .error__form .form__item {
+    margin-right: calc(15px + 15 * ((100vw - 320px) / (1600)));
+  }
+
+  .error__home {
+    margin-bottom: calc(20px + 42 * ((100vw - 320px) / (1600)));
+  }
 }
 
 @media screen and (max-width: 1050px) {
@@ -4743,6 +4890,14 @@ textarea.form__input {
 
   .service-request__link {
     margin: 0 19px 0 0;
+  }
+
+  .error {
+    padding-top: 40px;
+  }
+
+  .error__wrapper {
+    text-align: center;
   }
 }
 
@@ -5026,6 +5181,24 @@ textarea.form__input {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
+  }
+
+  .error__form .form__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .error__form .form__item {
+    margin: 0 0 10px;
+  }
+
+  .error__form .form__button {
+    margin-top: 15px;
   }
 }
 
@@ -5317,6 +5490,10 @@ textarea.form__input {
   }
 
   .social__item i {
+    font-size: 18px;
+  }
+
+  .social__item i::before {
     color: #373738;
   }
 

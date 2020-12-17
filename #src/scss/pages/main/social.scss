@@ -16,7 +16,11 @@
 		}
 		@media screen and (max-width: 575px) {
 			i {
-				color: $Black;
+				font-size: 18px;
+				
+				&::before {
+					color: $Black;
+				}
 			}
 		}
 	}
@@ -29,6 +33,7 @@
 		border: 1px solid $LGray;
 		width: 42px;
 		height: 42px;
+		text-decoration: none;
 
 		@media screen and (max-width: 991px) {
 			transform: scale(0.66);

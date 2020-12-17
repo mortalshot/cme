@@ -1,0 +1,50 @@
+@@include('html-components/_header.html', {
+"title": "404",
+"headerclass": ""
+})
+
+<main class="site__main">
+	<section class="error">
+		@@include('html-components/breadcrumbs.html', {
+			"breadcrumbs__title": "404",
+		})
+		<div class="error__container container">
+			<div class="error__wrapper">
+				<h1 class="error__title">Ой! Такой страницы не&nbsp;существует.</h1>
+				<div class="error__image">
+					<img src="img/404.svg" alt="">
+				</div>
+				<div class="error__form form">
+					<form action="#" id="form" class="form__body">
+						<div class="error__text">Мы готовы помочь вам, наш менеджер ответить на любые вопросы по&nbsp;нашим услугам.</div>
+						<div class="form__row">
+							<div class="form__item">
+								<label for="errorName" class="form__label">Ваше имя*:</label>
+								<input id="errorName" type="text" name="name" class="form__input" required>
+							</div>
+							<div class="form__item">
+								<label for="errorEmail" class="form__label">Контактный телефон*:</label>
+								<input id="errorEmail" type="text" name="phone" class="form__input form__input--phone">
+							</div>
+							<div class="form__item">
+								<button type="submit" class="form__button btn btn-bg">
+									<i class="icon-phone-call"></i>
+									<span>Перезвоните мне</span>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="error__home">
+					<a href=""> 
+						<i class="icon-btn-more"></i>
+						<span>Вернуться на главную страницу</span>
+					</a>
+				</div>
+				<div class="error__text">Приносим свои извинения за&nbsp;доставленные&nbsp;неудобства!</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+@@include('html-components/_footer.html')

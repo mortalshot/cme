@@ -1,0 +1,127 @@
+.error {
+    @include adaptiv-value("padding-bottom", 100, 40, 1);
+
+    @media screen and (max-width: 991px) {
+        padding-top: 40px;
+    }
+
+    .breadcrumbs__title {
+        display: none;
+    }
+
+    &__wrapper {
+        max-width: 856px;
+
+        @media screen and (max-width: 991px) {
+            text-align: center;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 49px;
+        text-transform: uppercase;
+        @include adaptiv-value("margin-bottom", 43, 20, 1);
+
+        @media screen and (max-width: $layoutDesktop - 0.02 + "px") {
+            font-size: calc(20px + 16 * ((100vw - 320px) / (1920 - 320)));
+            line-height: calc(49 / 36);
+        }
+    }
+
+    &__image {
+        @include adaptiv-value("margin-bottom", 62, 25, 1);
+    }
+
+    &__form {
+        @include adaptiv-value("margin-bottom", 40, 20, 1);
+
+        .error__text {
+            @include adaptiv-value("margin-bottom", 28, 15, 1);
+        }
+
+        .form__row {
+            display: flex;
+            align-items: flex-end;
+
+            @media screen and (max-width: 767px) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .form__item {
+            @include adaptiv-value("margin-right", 30, 15, 1);
+            flex: 0 0 33.333%;
+
+            @media screen and (max-width: 767px) {
+                margin: 0 0 10px;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .form__label {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 6px;
+            padding-left: 5px;
+            text-align: left;
+
+            @media screen and (min-width: $layoutDesktop + "px") {
+                font-size: calc(6px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+                line-height: calc(16 / 12);
+            }
+        }
+
+        .form__input {
+            border: 1px solid $DGray;
+            border-radius: 3px;
+        }
+
+        .form__button {
+            width: 100%;
+            max-width: 204px;
+
+            @media screen and (max-width: 767px) {
+                margin-top: 15px;
+            }
+
+            &::before {
+                display: none;
+            }
+
+            i {
+                margin-right: 12px;
+                font-size: 13px;
+                display: inline-flex;
+            }
+        }
+    }
+
+    &__home {
+        @include adaptiv-value("margin-bottom", 62, 20, 1);
+
+        a {
+            text-decoration: none;
+        }
+
+        i {
+            margin-right: 2px;
+            font-size: 16px;
+
+            &::before {
+                color: $Red;
+            }
+        }
+
+        span {
+            font-weight: 600;
+            text-decoration: underline;
+        }
+    }
+}
