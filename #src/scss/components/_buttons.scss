@@ -10,16 +10,24 @@
     background-color: $Red;
     color: $White;
     text-decoration: none;
-    
-    &:hover {
-        color: $White;
+    transition: 0.3s ease all 0s;
+
+    @media screen and (min-width: 992px) {
+        &:hover {
+            color: $White;
+            background-color: $Red2;
+        }
+        &:active {
+            color: $White;
+            background-color: $Red2;
+            box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3);
+        }
     }
 
     @media screen and (min-width: 2200px) {
         font-size: 18px;
         padding: 12px 22px;
     }
-
 
     &::before {
         content: "";

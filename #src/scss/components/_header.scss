@@ -379,6 +379,7 @@
 		&:focus {
 			background: rgba(0, 0, 0, 0.3);
 			border-radius: 6px 0 0 6px;
+			border-color: $White;
 			transform: scale(1);
 			width: 100%;
 			box-shadow: none;
@@ -411,6 +412,16 @@
 		&:focus + .search__btn:active,
 		&:valid + .search__btn:active {
 			transform: translateY(1px);
+		}
+
+		&::-webkit-search-cancel-button {
+			position: relative;
+			cursor: pointer;
+			right: 0;
+			-webkit-appearance: none;
+			height: 19px;
+			width: 19px;
+			background: url(../img/icons/service/reset.svg) no-repeat center/cover;
 		}
 	}
 

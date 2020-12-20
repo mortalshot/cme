@@ -177,6 +177,10 @@
 					font-size: calc(6px + 8 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
 					line-height: calc(19 / 14);
 				}
+
+				&::placeholder {
+					color: $White;
+				}
 			}
 
 			&__button {

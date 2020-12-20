@@ -22,3 +22,154 @@
 
 // === Pages ===
 @import "pages/index";
+
+// !Popup
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(11, 11, 11, 0.8);
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 6;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: 0.8s ease all 0s;
+
+	&.open {
+		opacity: 1;
+		visibility: visible;
+
+		.popup__content {
+			transform: perspective(600px) translate(0, 0) rotateX(0deg);
+			opacity: 1;
+		}
+	}
+
+	&__body {
+		min-height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 30px 10px;
+
+		@media screen and (max-width: 450px) {
+			padding: 30px 0;
+		}
+	}
+
+	&__content {
+		// background: $card-color;
+		color: #fff;
+		padding: 60px 40px 64px;
+		width: 100%;
+		max-width: 950px;
+		position: relative;
+		opacity: 0;
+		transform: translate(0, -100%);
+		transition: 0.8s ease all 0s;
+
+		@media screen and (max-width: 767px) {
+			padding: 25px 10px 60px;
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 25px;
+		right: 27px;
+
+		@media screen and (max-width: 767px) {
+			top: 15px;
+			right: 7px;
+		}
+	}
+
+	&.appointment {
+		text-align: center;
+
+		.appointment {
+			&__text {
+				font-size: 12px;
+				line-height: 16px;
+				color: $DGray;
+				margin-bottom: 15px;
+
+				@media screen and (min-width: $layoutDesktop + "px") {
+					font-size: calc(6px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+					line-height: calc(16 / 12);
+				}
+			}
+
+			&__content {
+				background-color: $Black;
+				padding: 60px 0 40px;
+				@include adaptiv-value("padding-right", 40, 15, 1);
+				@include adaptiv-value("padding-bottom", 40, 15, 1);
+				@include adaptiv-value("padding-left", 40, 15, 1);
+				@include adaptiv-value("max-width", 500, 320, 1);
+			}
+
+			&__form {
+				.form {
+					&__label {
+						text-align: left;
+						font-size: 12px;
+						line-height: 16px;
+						color: $DGray;
+
+						@media screen and (min-width: $layoutDesktop + "px") {
+							font-size: calc(
+								6px + 6 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile}))
+							);
+							line-height: calc(16 / 12);
+						}
+					}
+
+					&__input {
+						background-color: transparent;
+						border: 1px solid $DGray;
+						font-weight: 300;
+						color: $White;
+						font-size: 14px;
+						line-height: 19px;
+
+						&::placeholder {
+							color: $White;
+						}
+					}
+
+					&__button {
+						margin: 0 auto;
+
+						&::before {
+							display: none;
+						}
+
+						i {
+							margin-right: 5px;
+						}
+					}
+				}
+			}
+		}
+
+		.select {
+			&__title {
+				background-color: transparent;
+				border-color: $DGray;
+				color: $White;
+				font-weight: 300;
+				font-size: 14px;
+				line-height: 19px;
+			}
+
+			&__options {
+				text-align: left;
+				font-weight: 300;
+			}
+		}
+	}
+}

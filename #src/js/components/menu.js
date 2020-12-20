@@ -12,3 +12,7 @@ $(".header__search input").focusout(function () {
     $('.header__list').fadeIn(300);
     $('.header__search').css({ 'width': '80px' });
 });
+
+$('.header .popup-link').click(function() {
+    $('.header__burger, .header__menu').removeClass('active');
+})

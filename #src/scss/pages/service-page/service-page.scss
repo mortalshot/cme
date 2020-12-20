@@ -2,6 +2,10 @@
 	&__filter {
 	}
 
+	h2 {
+		margin-bottom: 0;
+	}
+
 	&__content {
 		@include adaptiv-value("padding-top", 26, 20, 0);
 	}
