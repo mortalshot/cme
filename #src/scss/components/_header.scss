@@ -168,7 +168,7 @@
 		@media screen and (min-width: 992px) {
 			&:hover {
 				color: $White;
-				
+
 				&::before {
 					transform: scale(1);
 				}
@@ -373,6 +373,12 @@
 	right: 0;
 	width: 80px;
 
+	&__close {
+		display: none;
+		opacity: 0;
+		transition: 0.3s ease all 1s;
+	}
+
 	input {
 		background: transparent;
 		border-radius: 1.5em;
@@ -384,54 +390,17 @@
 		width: 3em;
 		height: 3em;
 		box-shadow: 0 0 0 0.4em $White inset;
-		color: $White;
+		color: transparent;
+		position: relative;
+		z-index: 1;
+		cursor: pointer;
 
-		&:focus {
-			background: rgba(0, 0, 0, 0.3);
-			border-radius: 6px 0 0 6px;
-			border-color: $White;
-			transform: scale(1);
-			width: 100%;
-			box-shadow: none;
-		}
-
-		&:invalid:not(:focus) {
-			cursor: pointer;
-		}
-
-		/* Active state */
-		&:focus + .search__btn {
-			background: rgba(0, 0, 0, 0.3);
-			border-radius: 0 6px 6px 0;
-			transform: scale(1);
-		}
-
-		&:focus + .search__btn:before,
-		&:focus + .search__btn:after {
-			opacity: 1;
-		}
-		&:focus + .search__btn:before,
-		&:valid + .search__btn:before {
-			box-shadow: 0 0 0 0.2em $Red inset;
-		}
-		&:focus + .search__btn:after,
-		&:valid + .search__btn:after {
-			background-color: $Red;
-		}
-
-		&:focus + .search__btn:active,
-		&:valid + .search__btn:active {
-			transform: translateY(1px);
+		&::placeholder {
+			color: transparent;
 		}
 
 		&::-webkit-search-cancel-button {
-			position: relative;
-			cursor: pointer;
-			right: 0;
-			-webkit-appearance: none;
-			height: 19px;
-			width: 19px;
-			background: url(../img/icons/service/reset.svg) no-repeat center/cover;
+			display: none;
 		}
 	}
 
@@ -440,6 +409,7 @@
 		border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
 		padding: 0.75em;
 		position: relative;
+		z-index: 3;
 		transform: translate(0.25em, 0.25em) rotate(45deg) scale(0.25, 0.125);
 		transform-origin: 0 50%;
 		transition: 0.3s ease all 0s;
@@ -481,6 +451,57 @@
 			overflow: hidden;
 			width: 1px;
 			height: 1px;
+		}
+	}
+
+	&.active {
+		width: 100%;
+
+		.search__close {
+			flex: 0 0 19px;
+			max-width: 19px;
+			position: absolute;
+			left: 12px;
+			top: 50%;
+			transform: translate(0, -50%);
+			opacity: 1;
+			z-index: 2;
+			display: flex;
+		}
+
+		input {
+			background: rgba(0, 0, 0, 0.3);
+			border-radius: 6px 0 0 6px;
+			border-color: $White;
+			color: $White;
+			transform: scale(1);
+			width: 100%;
+			box-shadow: none;
+			padding-left: 40px;
+			padding-right: 25px;
+			margin-right: 25px;
+
+			&::placeholder {
+				color: inherit;
+			}
+		}
+
+		.search__btn {
+			background: rgba(0, 0, 0, 0.3);
+			border-radius: 0 6px 6px 0;
+			transform: scale(1);
+			right: 25px;
+
+			&::before,
+			&::after {
+				opacity: 1;
+			}
+			&::before {
+				box-shadow: 0 0 0 0.2em $Red inset;
+			}
+			&::after {
+				background-color: $Red;
+			}
 		}
 	}
 }
