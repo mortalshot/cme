@@ -27,7 +27,8 @@
 			margin: 0px 15px 0 0px;
 		}
 		@media screen and (max-width: 500px) {
-			margin: 0 0 4px 0;
+			margin: 0 0 15px 0;
+			max-width: 100%;
 		}
 	}
 
@@ -48,18 +49,14 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		flex: 0 0 61px;
-		height: 42px;
 		margin-right: 25px;
+		flex: 0 0 61px;
+		padding: 5px;
+		@include adaptiv-value("flex-basis", 61, 36, 1);
+		@include adaptiv-value("margin-right", 25, 15, 1);
 
-		@media screen and (max-width: 991px) {
-			margin-right: -4px;
-			transform: scale(0.66);
-			transform-origin: 0;
-		}
-		@media screen and (max-width: 500px) {
-			transform: scale(0.57);
-			margin-right: -10px;
+		@media screen and (max-width: 575px) {
+			padding: 3px;
 
 			&:last-child {
 				margin-right: 0;

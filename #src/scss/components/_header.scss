@@ -144,8 +144,8 @@
 		}
 
 		&--active {
-			.header__link::before {
-				transform: scale(1);
+			.header__link {
+				color: $Red;
 			}
 		}
 	}
@@ -159,10 +159,20 @@
 		position: relative;
 		white-space: nowrap;
 		text-decoration: none;
+		transition: 0.3s ease all 0s;
 
 		@media screen and (min-width: 2200px) {
 			font-size: 24px;
 			line-height: 33px;
+		}
+		@media screen and (min-width: 992px) {
+			&:hover {
+				color: $White;
+				
+				&::before {
+					transform: scale(1);
+				}
+			}
 		}
 		@media screen and (max-width: $layoutDesktop + "px") {
 			font-size: calc(16px + 4 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));

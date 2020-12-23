@@ -1,8 +1,5 @@
 .breadcrumbs {
 	padding: 30px 0;
-	@media screen and (max-width: 991px) {
-		display: none;
-	}
 
 	&__items {
 		display: flex;
@@ -11,9 +8,24 @@
 	}
 
 	&__item {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+
 		@media screen and (max-width: $layoutDesktop + 'px') {
 			font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
-			line-height: calc(16 / 12);
+			line-height: calc(16 / 14);
+		}
+	}
+
+	span {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+
+		@media screen and (max-width: $layoutDesktop + 'px') {
+			font-size: calc(12px + 2 * ((100vw - #{$layoutMobile}px) / (#{$layoutDesktop} - #{$layoutMobile})));
+			line-height: calc(16 / 14);
 		}
 	}
 
